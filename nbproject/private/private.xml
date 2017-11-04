@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/patterns/DrawingPattern.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/patterns/RandomPattern.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/gui/MainWindowController.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/shapes/Star.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/gui/MainWindow.fxml</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/patterns/GridPattern.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/shapes/Square.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/ShapeDrawer.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/shapes/Triangle.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/shapes/Shape.java</file>
+            <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/patterns/SpiralPattern.java</file>
+        </group>
+    </open-files>
+</project-private>
