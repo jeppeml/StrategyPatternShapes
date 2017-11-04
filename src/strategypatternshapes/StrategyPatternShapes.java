@@ -19,7 +19,7 @@ public class StrategyPatternShapes extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("gui/FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("gui/MainWindow.fxml"));
         
         Scene scene = new Scene(root);
         
