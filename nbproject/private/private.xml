@@ -6,5 +6,12 @@
             <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/gui/MainWindowController.java</file>
             <file>file:/D:/Dropbox/Documents/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/ShapeDrawer.java</file>
         </group>
+        <group name="Projects">
+            <file>file:/Users/jeppjleemoritzled/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/ShapeDrawer.java</file>
+            <file>file:/Users/jeppjleemoritzled/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/shapes/Star.java</file>
+            <file>file:/Users/jeppjleemoritzled/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/shapes/Square.java</file>
+            <file>file:/Users/jeppjleemoritzled/GitHub/StrategyPatternShapes/src/strategypatternshapes/gui/MainWindowController.java</file>
+            <file>file:/Users/jeppjleemoritzled/GitHub/StrategyPatternShapes/src/strategypatternshapes/bll/shapes/Shape.java</file>
+        </group>
     </open-files>
 </project-private>

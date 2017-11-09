@@ -39,8 +39,8 @@ public class ShapeDrawer {
         this.shapes.remove(shape);
     }
     
-    public void setShapes(List<Shape> shapes) {
-        this.shapes = shapes;
+    public void addAllShapes(List<Shape> shapes) {
+        this.shapes.addAll(shapes);
     }
 
     public List<Shape> getShapes() {
@@ -52,7 +52,6 @@ public class ShapeDrawer {
     }
     
     public void draw() {
-        
         drawStrategy.drawShapes(shapes, context);
     }
            
