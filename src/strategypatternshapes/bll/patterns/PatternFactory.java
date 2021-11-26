@@ -9,10 +9,24 @@ package strategypatternshapes.bll.patterns;
  *
  * @author jeppjleemoritzled
  */
-public class PatternFactory
-{
-    public enum PatternType { Grid, Random, Spiral };
-    
+public class PatternFactory {
+
+    /**
+     * Patterns supported by factory
+     */
+    public enum PatternType {
+        Grid,
+        Random,
+        Spiral
+    };
+
+    /**
+     * The pattern factory makes it easier to create new shapes, dependant on
+     * the chosen PatternType
+     *
+     * @param patternType
+     * @return
+     */
     public DrawingPattern create(PatternType patternType) {
         switch (patternType) {
             case Grid:
@@ -22,7 +36,7 @@ public class PatternFactory
             case Spiral:
                 return new SpiralPattern();
             default:
-                throw new UnsupportedOperationException("Type not implemented in factory"); 
+                throw new UnsupportedOperationException("Type not implemented in factory");
         }
     }
 

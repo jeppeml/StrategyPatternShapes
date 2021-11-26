@@ -5,7 +5,6 @@
  */
 package strategypatternshapes.gui;
 
-import java.util.List;
 import java.util.Random;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,37 +18,39 @@ import strategypatternshapes.bll.shapes.ShapeFactory;
 
 /**
  *
+ * Represents the views state as a model
+ *
  * @author jeppjleemoritzled
  */
-public class MainModel
-{
+public class MainModel {
+
     private final ObservableList<Shape> shapeList = FXCollections.observableArrayList();
-    private PatternType currentPattern;
+
     private ShapeFactory shapeFactory = new ShapeFactory();
     private PatternFactory patternFactory = new PatternFactory();
 
-    public ObservableList<Shape> getShapeList()
-    {
+    /**
+     *
+     * @return an observable list of shapes
+     */
+    public ObservableList<Shape> getShapeList() {
         return shapeList;
     }
 
-    public PatternType getCurrentPattern()
-    {
-        return currentPattern;
-    }
-    
-    public void setPattern(PatternType patternType)
-    {
-        currentPattern = patternType;
-    }
-
-    public void clear()
-    {
+    /**
+     * Removes all added shapes
+     */
+    public void clear() {
         shapeList.clear();
     }
 
-    public void fillRandomShapes(int amount)
-    {
+    /**
+     * Adds a specified amount of shapes. Chooses random shape and size of
+     * shape.
+     *
+     * @param amount of random shapes to add
+     */
+    public void fillRandomShapes(int amount) {
         shapeList.clear();
         Random rand = new Random();
         for (int i = 0; i < amount; i++) {
@@ -61,14 +62,29 @@ public class MainModel
         }
     }
 
-    public void addShape(ShapeFactory.ShapeType selectedType, int size)
-    {
+    /**
+     *
+     * Creates a new shape based on the type wanted
+     *
+     *
+     * @param selectedType, the type specified in the factory (ShapeFactory
+     * enum)
+     * @param size, the size in pixels
+     */
+    public void addShape(ShapeFactory.ShapeType selectedType, int size) {
         Shape shape = shapeFactory.create(selectedType, size);
         shapeList.add(shape);
     }
 
-    public void drawPattern(PatternType selectedPattern, GraphicsContext context)
-    {
+    /**
+     *
+     * creates a new pattern based on the type wanted
+     *
+     * @param selectedPattern, the type specified in the factory (PatternFactory
+     * enum)
+     * @param context
+     */
+    public void drawPattern(PatternType selectedPattern, GraphicsContext context) {
         DrawingPattern pattern = patternFactory.create(selectedPattern);
 
         ShapeDrawer shapeDrawer = new ShapeDrawer(context);

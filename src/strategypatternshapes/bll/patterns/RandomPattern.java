@@ -13,18 +13,18 @@ import javafx.scene.canvas.GraphicsContext;
  *
  * @author Jeppe
  */
-public class RandomPattern implements DrawingPattern{ 
+public class RandomPattern implements DrawingPattern {
 
+    /**
+     * A pattern that draws randomly, based on the canvas size
+     */
     @Override
     public void drawShapes(List<Shape> shapes, GraphicsContext context) {
-        
-        
         for (Shape shape : shapes) {
-            int x = (int)(Math.random()*context.getCanvas().getWidth());
-        int y = (int)(Math.random()*context.getCanvas().getHeight());
+            int x = (int) (Math.random() * context.getCanvas().getWidth());
+            int y = (int) (Math.random() * context.getCanvas().getHeight());
             shape.draw(x, y, context);
         }
-        
     }
-    
+
 }

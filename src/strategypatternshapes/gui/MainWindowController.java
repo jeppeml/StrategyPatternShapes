@@ -23,6 +23,7 @@ import strategypatternshapes.bll.shapes.ShapeFactory.ShapeType;
  * @author Jeppe
  */
 public class MainWindowController implements Initializable {
+
     @FXML
     private Canvas canvasMain;
     @FXML
@@ -33,22 +34,29 @@ public class MainWindowController implements Initializable {
     private ListView<Shape> lstShapes;
     @FXML
     private TextField txtSize;
-    
+
+    // Holds the list of shapes and communicates with BLL
     MainModel model = new MainModel();
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // Loads values into ComboBox from the enum in ShapeFactory
         for (ShapeType st : ShapeType.values()) {
             comboShapes.getItems().add(st);
         }
 
+        // Loads values into ComboBox from the enum in PatternFactory
         for (PatternType pt : PatternType.values()) {
             comboPatterns.getItems().add(pt);
         }
 
         comboShapes.getSelectionModel().selectFirst();
         comboPatterns.getSelectionModel().selectFirst();
-        
+
+        /**
+         * Connects model and view, so that the view is always updated
+         * automagically
+         */
         lstShapes.setItems(model.getShapeList());
         txtSize.setText("10");
     }
@@ -57,7 +65,7 @@ public class MainWindowController implements Initializable {
     private void clickDrawShapes(ActionEvent event) {
         PatternType selectedPattern = comboPatterns.getSelectionModel().getSelectedItem();
         canvasMain.getGraphicsContext2D().clearRect(0, 0, canvasMain.getWidth(), canvasMain.getHeight());
-        
+
         model.drawPattern(selectedPattern, canvasMain.getGraphicsContext2D());
     }
 
@@ -77,7 +85,8 @@ public class MainWindowController implements Initializable {
         try {
             int size = Integer.parseInt(txtSize.getText());
             model.addShape(selectedType, size);
-        } catch (NumberFormatException nfe) {
+        }
+        catch (NumberFormatException nfe) {
             txtSize.setText("");
         }
     }
